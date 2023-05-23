@@ -4,6 +4,7 @@ const score = document.getElementById("score");
 const res = document.getElementById("res");
 
 rock.style.backgroundImage = `url(./rock${randomInteger(1, 3)}.png)`;
+let record = 2;
 
 function jump() {
   dino.classList.add("jump-animation");
@@ -33,8 +34,9 @@ setInterval(() => {
   }
 
   if (rockLeft < 50 && rockLeft > 0 && dinoTop > 150) {
-    if (score.innerText > 2) {
+    if (score.innerText > record) {
       res.innerHTML = "Рекорд: " + score.innerText;
+      record = +score.innerText;
     }
     score.innerText = 0;
     //alert("Очки: " + score.innerText + ". Почати спочатку?")
