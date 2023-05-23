@@ -33,7 +33,7 @@ setInterval(() => {
 
   if (rockLeft < 50 && rockLeft > 0 && dinoTop > 150) {
     //alert("Очки: " + score.innerText + ". Почати спочатку?")
-    location.reload();
+    //location.reload();
   }
 }, 50);
 
