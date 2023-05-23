@@ -1,6 +1,7 @@
 const dino = document.getElementById("dino");
 const rock = document.getElementById("rock");
 const score = document.getElementById("score");
+const res = document.getElementById("res");
 
 rock.style.backgroundImage = `url(./rock${randomInteger(1, 3)}.png)`;
 
@@ -32,6 +33,8 @@ setInterval(() => {
   }
 
   if (rockLeft < 50 && rockLeft > 0 && dinoTop > 150) {
+    res.innerHTML = "Рекорд: " + score.innerText";
+    score.innerText = 0;
     //alert("Очки: " + score.innerText + ". Почати спочатку?")
     //location.reload();
   }
