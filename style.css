@@ -41,7 +41,7 @@
 }
 
 .jump-animation {
-  animation: jump 0.5s;
+  animation: jump 0.4s;
 }
 
 @keyframes jump {
