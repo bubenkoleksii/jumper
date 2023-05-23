@@ -2,6 +2,7 @@ const dino = document.getElementById("dino");
 const rock = document.getElementById("rock");
 const score = document.getElementById("score");
 const res = document.getElementById("res");
+const btn = document.getElementById("btn");
 
 rock.style.backgroundImage = `url(./rock${randomInteger(1, 3)}.png)`;
 let record = 2;
@@ -11,6 +12,12 @@ function jump() {
   setTimeout(() =>
     dino.classList.remove("jump-animation"), 500);
 }
+
+btn.addEventListener('click', (event) => {
+  if (!dino.classList.contains('jump-animation')) {
+    jump();
+  }
+})
 
 document.addEventListener('keypress', (event) => {
   if (!dino.classList.contains('jump-animation')) {
