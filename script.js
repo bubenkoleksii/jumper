@@ -33,7 +33,9 @@ setInterval(() => {
   }
 
   if (rockLeft < 50 && rockLeft > 0 && dinoTop > 150) {
-    res.innerHTML = "Рекорд: " + score.innerText;
+    if (score.innerText > 2) {
+      res.innerHTML = "Рекорд: " + score.innerText;
+    }
     score.innerText = 0;
     //alert("Очки: " + score.innerText + ". Почати спочатку?")
     //location.reload();
